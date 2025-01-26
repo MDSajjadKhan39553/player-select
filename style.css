@@ -1,0 +1,6 @@
+.selected-player{
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ffffffA1;
+    margin-bottom: 1rem;
+}
