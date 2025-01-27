@@ -36,8 +36,9 @@ for(const btn of allBtn){
         selectedPlayerContiner.appendChild(div);
         // other functions call on add ----------------------
         const currentPrice = getValueElement("budget")
-        if (getValueElement("budget") - price > currentPrice) {
+        if (getValueElement("budget") - price < 0) {
             alert("budget ses")
+            return
         }
 
 
@@ -55,7 +56,7 @@ for(const btn of allBtn){
 
 
         const budget = getValueElement("budget");
-        // document.getElementById("budget").innerText = budget - parseInt(price);
+        document.getElementById("budget").innerText = budget - parseInt(price);
         
 
         const cart = getValueElement("cart")
@@ -64,6 +65,10 @@ for(const btn of allBtn){
 
         const left = getValueElement("left")
         document.getElementById("left").innerText = left - 1;
+
+
+        event.target.setAttribute("disabled", false);
+        event.target.parentNode.parentNode.style.background="gray"
 
 
 
